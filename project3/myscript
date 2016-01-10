@@ -1,0 +1,13 @@
+#!/bin/tcsh
+
+       make all
+
+       foreach file (*.x) # for ever executable
+		$file
+	        if ($status == 0) then # 0 means success 1 means fail
+		    echo "pass!"
+	       	else
+		    echo "fail!"
+	        endif
+       end
+			
